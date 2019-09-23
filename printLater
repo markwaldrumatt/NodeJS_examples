@@ -1,0 +1,14 @@
+#! /usr/bin/node
+
+// printLater demonstrates non-blocking code
+
+function printLater(message, timeout) {
+  function handle() {
+    console.log(message);
+  }
+  setTimeout(handle, timeout);
+}
+
+printLater("1st call", 5000);
+printLater("2nd call", 50);
+console.log("This is the call to the console log");

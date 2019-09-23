@@ -1,0 +1,10 @@
+#! /usr/bin/node
+
+var a = ['dog', 'cat', 'hen'];
+a[100] = 'fox';
+
+console.log("length of array a is " + a.length);
+
+for (var i=0; i < a.length; i++) {
+  console.log(a[i]);
+}

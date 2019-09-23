@@ -1,0 +1,21 @@
+#! /usr/bin/node
+
+var avg = function() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
+
+var a = 1;
+var b = 2;
+
+(function() {
+  var b = 3;
+  a += b;
+})();
+
+console.log("a is " + a);
+console.log("b is " + b);
+console.log("avg is " + avg(a,b));
